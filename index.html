@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PULSE Water Dashboard</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header><div><div class="eyebrow">SMART WATER / AIoT</div><h1>PULSE Water Dashboard</h1><p>Monitoring, visualization, SCADA-style control and public demonstration interface.</p></div><div class="badge">SIMULATION MODE</div></header>
+<main>
+<section class="metrics">
+<article><small>Flow Rate</small><b id="flow">12.4</b><span>L/min</span></article>
+<article><small>Tank Level</small><b id="level">72</b><span>%</span></article>
+<article><small>Water Quality</small><b id="quality">94</b><span>score</span></article>
+<article><small>System Status</small><b class="ok">Normal</b><span>software demo</span></article>
+</section>
+<section class="grid">
+<article class="panel"><div class="panelHead"><div><small>SCADA OVERVIEW</small><h2>Distribution System</h2></div><button id="toggle">Toggle pump</button></div>
+<div class="plant"><div class="tank"><div id="water"></div><label>Tank</label></div><div class="pipe"></div><div id="pump" class="pump on">PUMP</div><div class="pipe"></div><div class="tap">OUTLET</div></div>
+<p id="pumpState">Pump is running in simulation mode.</p></article>
+<article class="panel"><small>LIVE MONITORING</small><h2>Telemetry</h2><canvas id="chart" width="600" height="260"></canvas><p class="muted">Synthetic telemetry is generated locally for a reproducible public demo.</p></article>
+</section>
+<section class="grid3">
+<article class="panel"><small>ALARM CENTER</small><h2>Recent Events</h2><ul id="events"><li>System initialized</li><li>Telemetry stream healthy</li><li>Thresholds within normal range</li></ul></article>
+<article class="panel"><small>INTEGRATION</small><h2>Data Pipeline</h2><ol><li>Field sensor / ESP32</li><li>Data service / ThingSpeak</li><li>Normalization</li><li>Dashboard & alerts</li></ol></article>
+<article class="panel"><small>PROJECT SCOPE</small><h2>Public Software Release</h2><p>This public repository focuses on the software dashboard and integration architecture. The interface is prepared for connection to validated field telemetry as deployments evolve.</p></article>
+</section>
+</main>
+<footer>PULSE • Smart-water monitoring software prototype • 2026</footer>
+<script src="js/app.js"></script></body></html>
